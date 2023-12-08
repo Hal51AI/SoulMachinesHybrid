@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+}
