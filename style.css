@@ -11,6 +11,6 @@ button {
     top: 50%;
 }
 
-#sm-video::-ms-controls {
+#sm-video::-moz-controls {
     display: none !important;
 }
