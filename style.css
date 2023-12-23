@@ -11,10 +11,6 @@ button {
     top: 50%;
 }
 
-#sm-video::-webkit-media-controls {
-    display: none !important;
-}
-
 #sm-video::-moz-controls {
     display: none !important;
 }
