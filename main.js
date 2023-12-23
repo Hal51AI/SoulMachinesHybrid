@@ -77,3 +77,8 @@ connectButton.addEventListener('click', () => {
     video.style.width = "100%";
   }
 );
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  await connect();
+});
