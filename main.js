@@ -80,5 +80,7 @@ connectButton.addEventListener('click', () => {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-  await connect();
+  connect();
+  video.style.height = "100%";
+  video.style.width = "100%";
 });
