@@ -10,7 +10,3 @@ button {
     position: absolute;
     top: 50%;
 }
-
-#sm-video::-moz-controls {
-    display: none !important;
-}
