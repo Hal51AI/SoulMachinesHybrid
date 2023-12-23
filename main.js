@@ -79,7 +79,7 @@ connectButton.addEventListener('click', () => {
 );
 
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
   const video = document.getElementById('sm-video');
   connect();
   video.style.height = "100%";
