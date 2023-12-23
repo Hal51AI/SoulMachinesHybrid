@@ -80,6 +80,7 @@ connectButton.addEventListener('click', () => {
 
 
 document.addEventListener("DOMContentLoaded", function() {
+  const video = document.getElementById('sm-video');
   connect();
   video.style.height = "100%";
   video.style.width = "100%";
