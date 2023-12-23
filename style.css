@@ -10,7 +10,3 @@ button {
     position: absolute;
     top: 50%;
 }
-
-video::-webkit-media-controls {
-  display:none !important;
-}
