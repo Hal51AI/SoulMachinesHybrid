@@ -80,10 +80,12 @@ connectButton.addEventListener('click', () => {
 
 document.addEventListener('readystatechange', function() {
   if (document.readyState === 'complete') {
-    const video = document.getElementById('sm-video');
-    connect();
-    connectButton.style.display = "none";
-    video.style.height = "100%";
-    video.style.width = "100%";
+    setTimeout(function() {
+      const video = document.getElementById('sm-video');
+      connect();
+      connectButton.style.display = "none";
+      video.style.height = "100%";
+      video.style.width = "100%";
+    }, 2000);
   }
 }, false);
