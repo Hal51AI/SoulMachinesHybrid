@@ -77,3 +77,11 @@ connectButton.addEventListener('click', () => {
     video.style.width = "100%";
   }
 );
+
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('sm-video');
+    connect();
+    connectButton.style.display = "none";
+    video.style.height = "100%";
+    video.style.width = "100%";
+}, false);
