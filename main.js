@@ -78,17 +78,14 @@ function onConnectionError(error) {
 //   }
 // );
 
-// document.addEventListener('readystatechange', function() {
-//   if (document.readyState === 'complete') {
-//     setTimeout(function() {
-//       const video = document.getElementById('sm-video');
-//       connect();
-//       connectButton.style.display = "none";
-//       video.style.height = "100%";
-//       video.style.width = "100%";
-//     }, 2000);
-//   }
-// }, false);
+document.addEventListener('readystatechange', function() {
+  if (document.readyState === 'complete') {
+      const video = document.getElementById('sm-video');
+      connect();
+      video.style.height = "100%";
+      video.style.width = "100%";
+  }
+}, false);
 
 const videoEl = document.getElementById('sm-video');
 videoEl.play()
