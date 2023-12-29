@@ -93,7 +93,7 @@ function onConnectionError(error) {
 const videoEl = document.getElementById('sm-video');
 videoEl.play()
   .then(() => {
-    // Video playback started
+    console.log("started");
   })
   .catch((error) => {
     // Video playback failed
