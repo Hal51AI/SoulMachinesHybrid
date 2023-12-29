@@ -78,10 +78,12 @@ connectButton.addEventListener('click', () => {
   }
 );
 
-window.addEventListener('load', function() {
+document.addEventListener('readystatechange', function() {
+  if (document.readyState === 'complete') {
     const video = document.getElementById('sm-video');
     connect();
     connectButton.style.display = "none";
     video.style.height = "100%";
     video.style.width = "100%";
+  }
 }, false);
