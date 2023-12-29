@@ -78,7 +78,7 @@ connectButton.addEventListener('click', () => {
   }
 );
 
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
     const video = document.getElementById('sm-video');
     connect();
     connectButton.style.display = "none";
