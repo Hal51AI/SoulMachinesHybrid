@@ -65,27 +65,37 @@ function onConnectionError(error) {
   }
 }
 
-/**
- * Event listeners for button in the HTML
- */
-const connectButton = document.getElementById('connect-button');
-connectButton.addEventListener('click', () => {
-    const video = document.getElementById('sm-video');
-    connect();
-    connectButton.style.display = "none";
-    video.style.height = "100%";
-    video.style.width = "100%";
-  }
-);
+// /**
+//  * Event listeners for button in the HTML
+//  */
+// const connectButton = document.getElementById('connect-button');
+// connectButton.addEventListener('click', () => {
+//     const video = document.getElementById('sm-video');
+//     connect();
+//     connectButton.style.display = "none";
+//     video.style.height = "100%";
+//     video.style.width = "100%";
+//   }
+// );
 
-document.addEventListener('readystatechange', function() {
-  if (document.readyState === 'complete') {
-    setTimeout(function() {
-      const video = document.getElementById('sm-video');
-      connect();
-      connectButton.style.display = "none";
-      video.style.height = "100%";
-      video.style.width = "100%";
-    }, 2000);
-  }
-}, false);
+// document.addEventListener('readystatechange', function() {
+//   if (document.readyState === 'complete') {
+//     setTimeout(function() {
+//       const video = document.getElementById('sm-video');
+//       connect();
+//       connectButton.style.display = "none";
+//       video.style.height = "100%";
+//       video.style.width = "100%";
+//     }, 2000);
+//   }
+// }, false);
+
+const videoEl = document.getElementById('sm-video');
+videoEl.play()
+  .then(() => {
+    // Video playback started
+  })
+  .catch((error) => {
+    // Video playback failed
+    console.log('Playback failed due to ', error)
+  })
