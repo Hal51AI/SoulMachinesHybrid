@@ -4,6 +4,11 @@ body {
 
 .container {
     text-align: center;
+    display: flex;
+}
+
+.center, #viewer-iframe {
+  flex: 1;
 }
 
 button {
