@@ -75,5 +75,8 @@ connectButton.addEventListener('click', () => {
     connectButton.style.display = "none";
     video.style.height = "100%";
     video.style.width = "50%";
+    const iframe = document.getElementById('viewer-iframe');
+    iframe.style.height = "100%";
+    iframe.style.width = "50%";
   }
 );
