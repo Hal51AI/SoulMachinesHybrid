@@ -1,26 +1,24 @@
 body {
   background-color: black;
+  height: 100vh;
 }
 
 .container {
     text-align: center;
     display: flex;
-    background-color: blue;
-}
-
-.center {
-    background-color: yellow;
-}
-
-#viewer-iframe {
-    background-color: red;
+    height: 100vh;
 }
 
 .center, #viewer-iframe {
   flex: 1;
 }
 
-button {
-    position: absolute;
-    top: 50%;
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  display: none;
 }
