@@ -73,10 +73,8 @@ connectButton.addEventListener('click', () => {
     const video = document.getElementById('sm-video');
     connect();
     connectButton.style.display = "none";
+    video.style.display = "center";
     video.style.height = "100%";
     video.style.width = "50%";
-    const iframe = document.getElementById('viewer-iframe');
-    iframe.style.height = "100%";
-    iframe.style.width = "50%";
   }
 );
