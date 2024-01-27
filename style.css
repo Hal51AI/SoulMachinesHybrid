@@ -10,3 +10,15 @@ button {
     position: absolute;
     top: 50%;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#sm-video, iframe {
+    flex: 1;
+    width: 50%;
+    height: 100%; /* Adjust the height as needed */
+    box-sizing: border-box;
+}
