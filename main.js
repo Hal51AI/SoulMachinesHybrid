@@ -5,9 +5,12 @@
 // Note that your API key must allow requests from
 // this StackBlitz demo: 'https://web-platform-9chn6x.stackblitz.io'
 // Note that the URL will change if you fork this project
-import { Scene } from '@soulmachines/smwebsdk'
+import { Persona, Scene } from '@soulmachines/smwebsdk'
 
 let scene;
+
+let persona = null;
+const PERSONA_ID = '1';
 
 /**
  * Start a new connection.
@@ -77,3 +80,13 @@ connectButton.addEventListener('click', () => {
     video.style.width = "100%";
   }
 );
+
+const stopButton = document.getElementById('stop-button');
+stopButton.addEventListener('click', () => {
+    if (!persona) {
+      persona = new Persona(scene, PERSONA_ID);
+    }
+    persona.stopSpeaking()
+  }
+);
+
