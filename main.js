@@ -81,12 +81,21 @@ connectButton.addEventListener('click', () => {
   }
 );
 
-const stopButton = document.getElementById('stop-button');
-stopButton.addEventListener('click', () => {
-    if (!persona) {
-      persona = new Persona(scene, PERSONA_ID);
-    }
-    persona.stopSpeaking()
+function stopSpeaking() {
+  console.log('stopSpeaking');
+  if (!persona) {
+    persona = new Persona(scene, PERSONA_ID);
   }
-);
+  persona.stopSpeaking();
+}
 
+function handleKeyPress(event) {
+  const key = event.key || String.fromCharCode(event.keyCode);
+  console.log('Key Code:', event.keyCode);
+  console.log('Key Value:', key);
+  if (key === 'Enter') {
+    stopSpeaking();
+  }
+}
+
+document.addEventListener('keydown', handleKeyPress);
