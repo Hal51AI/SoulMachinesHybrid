@@ -90,7 +90,9 @@ function stopSpeaking() {
 
 function handleKeyPress(event) {
   const key = event.key || String.fromCharCode(event.keyCode);
-  if (key === 'Enter') {
+  // console.log('Key Code:', event.keyCode);
+  // console.log('Key Value:', key);
+  if (key === ' ') {
     stopSpeaking();
   }
 }
