@@ -88,12 +88,26 @@ function stopSpeaking() {
   persona.stopSpeaking();
 }
 
+function toggleUserMicrophone() {
+  const active = scene.isMicrophoneActive();
+  scene.setMediaDeviceActive({
+      microphone: !active,
+  });
+}
+
 function handleKeyPress(event) {
   const key = event.key || String.fromCharCode(event.keyCode);
-  // console.log('Key Code:', event.keyCode);
-  // console.log('Key Value:', key);
-  if (key === 'Enter') {
-    stopSpeaking();
+  console.log('Key Code:', event.keyCode);
+  console.log('Key Value:', key);
+  switch(key) {
+    case ' ':
+      stopSpeaking();
+      break;
+    case 'Enter':
+      toggleUserMicrophone();
+      break;
+    default:
+      break;
   }
 }
 
