@@ -1,6 +1,7 @@
 body {
   background-color: black;
   height: 100vh;
+  margin: 0px;
 }
 
 .container {
@@ -11,6 +12,7 @@ body {
 
 .center, #viewer-iframe {
   flex: 1;
+  border: 0;
 }
 
 .center {
