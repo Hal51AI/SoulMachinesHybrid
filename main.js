@@ -5,7 +5,7 @@
 // Note that your API key must allow requests from
 // this StackBlitz demo: 'https://web-platform-9chn6x.stackblitz.io'
 // Note that the URL will change if you fork this project
-import { Persona, Scene } from '@soulmachines/smwebsdk'
+// import { Persona, Scene } from '@soulmachines/smwebsdk'
 
 let scene;
 
@@ -82,6 +82,7 @@ connectButton.addEventListener('click', () => {
 );
 
 function stopSpeaking() {
+  console.log('stopSpeaking');
   if (!persona) {
     persona = new Persona(scene, PERSONA_ID);
   }
@@ -89,6 +90,7 @@ function stopSpeaking() {
 }
 
 function toggleUserMicrophone() {
+  console.log('toggleUserMicrophone');
   const active = scene.isMicrophoneActive();
   scene.setMediaDeviceActive({ microphone: !active })
   .then(() => console.log('microphone active: ' + active))
@@ -97,8 +99,8 @@ function toggleUserMicrophone() {
 
 function handleKeyPress(event) {
   const key = event.key || String.fromCharCode(event.keyCode);
-  // console.log('Key Code:', event.keyCode);
-  // console.log('Key Value:', key);
+  console.log('Key Code:', event.keyCode);
+  console.log('Key Value:', key);
   if (key === 'Enter') {
     stopSpeaking();
   } else if (key === ' ') {
