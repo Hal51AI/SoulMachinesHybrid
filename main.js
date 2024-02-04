@@ -90,7 +90,9 @@ function stopSpeaking() {
 
 function toggleUserMicrophone() {
   const active = scene.isMicrophoneActive();
-  scene.setMediaDeviceActive({ microphone: !active });
+  scene.setMediaDeviceActive({ microphone: !active })
+  .then(() => console.log('microphone active: ' + active))
+  .catch((error) => console.log('microphone update failed: ', error));
 }
 
 function handleKeyPress(event) {
@@ -98,10 +100,10 @@ function handleKeyPress(event) {
   // console.log('Key Code:', event.keyCode);
   // console.log('Key Value:', key);
   switch(key) {
-    case 's':
+    case 'Enter':
       stopSpeaking();
       break;
-    case 'l':
+    case ' ':
       toggleUserMicrophone();
       break;
     default:
