@@ -5,7 +5,7 @@
 // Note that your API key must allow requests from
 // this StackBlitz demo: 'https://web-platform-9chn6x.stackblitz.io'
 // Note that the URL will change if you fork this project
-// import { Persona, Scene } from '@soulmachines/smwebsdk'
+import { Persona, Scene } from '@soulmachines/smwebsdk'
 
 let scene;
 
@@ -89,10 +89,12 @@ function stopSpeaking() {
 }
 
 function toggleUserMicrophone() {
-  const active = scene.isMicrophoneActive();
-  scene.setMediaDeviceActive({
-      microphone: !active,
-  });
+  if (!scene) {
+    const active = scene.isMicrophoneActive();
+    scene.setMediaDeviceActive({
+        microphone: !active,
+    });
+  }
 }
 
 function handleKeyPress(event) {
@@ -109,12 +111,7 @@ function handleKeyPress(event) {
       toggleUserMicrophone();
       break;
     default:
-        break;
-  }
-  if (key === 'Enter') {
-    stopSpeaking();
-  } else if (key === 'Enter') {
-    stopSpeaking();
+      break;
   }
 }
 
