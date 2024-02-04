@@ -5,7 +5,7 @@
 // Note that your API key must allow requests from
 // this StackBlitz demo: 'https://web-platform-9chn6x.stackblitz.io'
 // Note that the URL will change if you fork this project
-// import { Persona, Scene } from '@soulmachines/smwebsdk'
+import { Persona, Scene } from '@soulmachines/smwebsdk'
 
 let scene;
 
