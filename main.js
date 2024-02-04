@@ -99,15 +99,10 @@ function handleKeyPress(event) {
   const key = event.key || String.fromCharCode(event.keyCode);
   // console.log('Key Code:', event.keyCode);
   // console.log('Key Value:', key);
-  switch(key) {
-    case 'Enter':
-      stopSpeaking();
-      break;
-    case ' ':
-      toggleUserMicrophone();
-      break;
-    default:
-      break;
+  if (key === 'Enter') {
+    stopSpeaking();
+  } else if (key === ' ') {
+    toggleUserMicrophone();
   }
 }
 
