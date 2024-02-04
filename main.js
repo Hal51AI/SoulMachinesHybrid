@@ -82,6 +82,7 @@ connectButton.addEventListener('click', () => {
 );
 
 function stopSpeaking() {
+  console.log('Called toggleUserMicrophone');
   if (!persona) {
     persona = new Persona(scene, PERSONA_ID);
   }
@@ -89,13 +90,11 @@ function stopSpeaking() {
 }
 
 function toggleUserMicrophone() {
-  if (!scene) {
-    console.log('scene is not null');
-    const active = scene.isMicrophoneActive();
-    scene.setMediaDeviceActive({ microphone: !active })
-    .then(() => console.log('microphone active: ' + active))
-    .catch((error) => console.log('microphone update failed: ', error));
-    }
+  console.log('Called stopSpeaking');
+  const active = scene.isMicrophoneActive();
+  scene.setMediaDeviceActive({ microphone: !active })
+  .then(() => console.log('microphone active: ' + active))
+  .catch((error) => console.log('microphone update failed: ', error));
 }
 
 function handleKeyPress(event) {
@@ -104,11 +103,9 @@ function handleKeyPress(event) {
   console.log('Key Value:', key);
   switch(key) {
     case ' ':
-      console.log('Called stopSpeaking');
       stopSpeaking();
       break;
     case 'Enter':
-      console.log('Called toggleUserMicrophone');
       toggleUserMicrophone();
       break;
     default:
