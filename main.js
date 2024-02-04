@@ -91,10 +91,10 @@ function stopSpeaking() {
 function toggleUserMicrophone() {
   if (!scene) {
     const active = scene.isMicrophoneActive();
-    scene.setMediaDeviceActive({
-        microphone: !active,
-    });
-  }
+    scene.setMediaDeviceActive({ microphone: !active })
+    .then(() => console.log('microphone active: ' + active))
+    .catch((error) => console.log('microphone update failed: ', error));
+    }
 }
 
 function handleKeyPress(event) {
