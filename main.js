@@ -5,7 +5,7 @@
 // Note that your API key must allow requests from
 // this StackBlitz demo: 'https://web-platform-9chn6x.stackblitz.io'
 // Note that the URL will change if you fork this project
-import { Persona, Scene } from '@soulmachines/smwebsdk'
+// import { Persona, Scene } from '@soulmachines/smwebsdk'
 
 let scene;
 
@@ -101,13 +101,20 @@ function handleKeyPress(event) {
   console.log('Key Value:', key);
   switch(key) {
     case ' ':
+      console.log('Called stopSpeaking');
       stopSpeaking();
       break;
     case 'Enter':
+      console.log('Called toggleUserMicrophone');
       toggleUserMicrophone();
       break;
     default:
-      break;
+        break;
+  }
+  if (key === 'Enter') {
+    stopSpeaking();
+  } else if (key === 'Enter') {
+    stopSpeaking();
   }
 }
 
