@@ -90,6 +90,7 @@ function stopSpeaking() {
 
 function toggleUserMicrophone() {
   if (!scene) {
+    console.log('scene is not null');
     const active = scene.isMicrophoneActive();
     scene.setMediaDeviceActive({ microphone: !active })
     .then(() => console.log('microphone active: ' + active))
